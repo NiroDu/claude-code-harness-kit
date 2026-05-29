@@ -1,6 +1,6 @@
 # claude-code-harness-kit
 
-[中文文档](README-zh.md)
+[中文文档](README-CN.md)
 
 `claude-code-harness-kit` is a lightweight CLI plus scaffold for making any repository easier to run with a harness-style Claude Code workflow.
 
