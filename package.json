@@ -19,7 +19,7 @@
     "dist/src",
     "!dist/**/*.js.map",
     "README.md",
-    "README-CN.md",
+    "README-zh.md",
     "LICENSE"
   ],
   "engines": {
