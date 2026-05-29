@@ -1,0 +1,57 @@
+{
+  "name": "claude-code-harness-kit",
+  "version": "0.1.0",
+  "description": "A lightweight CLI and scaffold for Claude Code-style harness workflows in any repository.",
+  "type": "module",
+  "author": "nirodu",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "bin": {
+    "claude-code-harness-kit": "dist/src/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/src",
+    "!dist/**/*.js.map",
+    "README.md",
+    "README-zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "verify": "npm run typecheck && npm test"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "harness",
+    "cli",
+    "typescript",
+    "agent"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/NiroDu/claude-code-harness-kit#readme",
+  "bugs": {
+    "url": "https://github.com/NiroDu/claude-code-harness-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiroDu/claude-code-harness-kit.git"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "typescript": "^5.9.3"
+  }
+}
